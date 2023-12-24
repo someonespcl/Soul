@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="24dp"
+    tools:context=".activities.LoginIntoAcActivity">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="64dp">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:drawableStartCompat="@mipmap/ic_launcher"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textSize="32sp"
+            android:fontFamily="@font/signlode_font"
+            android:textColor="@android:color/white"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:includeFontPadding="false"
+            android:textSize="16sp"
+            android:fontFamily="@font/quick_sand"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"
+            android:text="@string/login_discrip" />
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_txt_bg"
+            android:hint="@string/email_address_hint"
+            app:backgroundTint="@null"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/quick_sand"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="12dp"
+            android:drawableStart="@drawable/custom_mail_ic"
+            android:drawablePadding="8dp"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/inputPass"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_txt_bg"
+            android:hint="@string/password_hint"
+            app:backgroundTint="@null"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/quick_sand"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp"
+            android:paddingHorizontal="12dp"
+            android:inputType="textPassword"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/custom_lock_ic" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <CheckBox
+                android:id="@+id/rememberMe"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Remember me"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/quick_sand"
+                android:includeFontPadding="false"
+                app:buttonTint="@android:color/white"
+                android:textSize="16sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/forgetPass"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Forget password?"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/quick_sand"
+                android:includeFontPadding="false"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Login"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="16dp"
+            app:backgroundTint="@null"
+            android:onClick="validateLoginDetails"
+            android:background="@drawable/btn_bg" />
+
+        <Button
+            android:id="@+id/googleBtn"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Login with google"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="16dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/google_btn_bg"
+            android:drawableStart="@drawable/google_focused"
+            android:drawablePadding="4dp" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:includeFontPadding="false"
+            android:textSize="16sp"
+            android:fontFamily="@font/quick_sand"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp"
+            android:text="Dont have an Account?"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:includeFontPadding="false"
+            android:textSize="16sp"
+            android:fontFamily="@font/quick_sand"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="4dp"
+            android:text="@string/register"
+            android:layout_gravity="center_horizontal"
+            android:onClick="goToRegisterActivity" />
+
+    </LinearLayout>
+</ScrollView>

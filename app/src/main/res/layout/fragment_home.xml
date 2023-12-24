@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    tools:context=".fragments.HomeFragment">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/homeShimmerLayout">
+
+            <include layout="@layout/layout_home" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </LinearLayout>
+
+</ScrollView>

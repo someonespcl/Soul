@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.soul'
+    compileSdk 33
+    buildToolsVersion '34.0.0'
+    
+    defaultConfig {
+        applicationId "com.soul"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        resConfig "en"
+        versionName "1.0-beta"
+        
+        vectorDrawables { 
+            useSupportLibrary true
+        }
+    }
+    
+    signingConfigs {
+        release {
+            storeFile file("soul-key.jks")
+            storePassword "soul143"
+            keyAlias "soul"
+            keyPassword "soul143"
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+    
+}
+
+dependencies {
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.daimajia.androidanimations:library:2.4@aar")
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
+    implementation("com.github.ibrahimsn98:SmoothBottomBar:1.7.9")
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+    implementation("com.google.firebase:firebase-auth")
+}
