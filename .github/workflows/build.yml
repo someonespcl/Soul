@@ -40,3 +40,9 @@ jobs:
       with:
         name: arm64-v8a release-apk
         path: app/build/outputs/apk/release/*
+     
+    - name: Save missing rules
+      run: |
+        mkdir -p missing_rules
+        cp app/build/outputs/mapping/release/missing_rules.txt missing_rules/
+      if: ${{ failure() }}
