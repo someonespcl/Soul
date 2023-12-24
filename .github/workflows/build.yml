@@ -45,4 +45,11 @@ jobs:
       run: |
         mkdir -p missing_rules
         cp app/build/outputs/mapping/release/missing_rules.txt missing_rules/
+        echo "Missing rules saved"
       if: ${{ failure() }}
+
+    - name: Upload missing rules as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: missing_rules
+        path: missing_rules
