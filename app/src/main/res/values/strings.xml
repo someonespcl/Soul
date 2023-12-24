@@ -5,6 +5,7 @@
     <string name="email_address_hint">Email Address</string>
     <string name="password_hint">Password</string>
     <string name="register"><b><u>Register</u></b></string>
+    <string name="login"><b><u>Login</u></b></string>
     
     <string name="register_discrip">Enter the email address\nand password you would like to Register into your account.</string>
 </resources>

@@ -20,4 +20,5 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.daimajia.easing.Glider { *; }
+-dontwarn com.daimajia.easing.Glider
+-dontwarn com.daimajia.easing.Skill

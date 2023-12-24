@@ -99,6 +99,10 @@ public class CreateAccountActivity extends AppCompatActivity {
         }
     }
     
+    public void goToLoginActivity(View view) {
+        startActivity(new Intent(CreateAccountActivity.this, LoginIntoAcActivity.class));
+    }
+    
     @Override
     protected void onDestroy() {
         super.onDestroy();

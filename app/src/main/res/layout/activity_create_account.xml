@@ -148,7 +148,8 @@
             android:fontFamily="@font/quick_sand"
             android:textColor="@android:color/white"
             android:layout_marginTop="4dp"
-            android:text="Login"
+            android:text="@string/login"
+            android:onClick="goToLoginActivity"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
